@@ -1,0 +1,45 @@
+body {
+	margin: 0;
+}
+* {
+	box-sizing: border-box;
+	font-family: 'Ubuntu', sans-serif;
+}
+div#body {
+	background: url(../img/body.gif);
+	position: absolute;
+	height: 100%;
+	width: 100%;
+}
+div#loader {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	font-size: 100px;
+	font-weight: bold;
+	margin-left: -75px;
+	margin-top: -60px;
+	transform: rotate(40deg);
+}
+div#loader span {
+	display: inline-block;
+	animation-iteration-count: infinite;
+}
+span.f_e {
+	color: rgb(147,149,152);
+	animation: a_1 1s;
+}
+span.s_e {
+	color: firebrick;
+	transform: rotate(180deg) translateY(10px);
+	margin-left: -66px;
+	animation: a_2 1s;
+}
+@keyframes a_1 {
+	50% { transform: translateX(-10px); }
+	100% { transform: translateX(0); }
+}
+@keyframes a_2 {
+	50% { transform: rotate(180deg) translate(-10px, 10px); }
+	100% { transform: rotate(180deg) translate(0px ,10px); }
+}
